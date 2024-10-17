@@ -26,7 +26,7 @@ def generate_sql_insert(num_records=1000):
 # Membuka file output dan menulis data
 with open(output_file, 'w') as f:
     file_size = 0
-    target_size = 5 * 1024 * 1024 * 1024  # 10 GB in bytes
+    target_size = 5 * 1024 * 1024 * 1024  # 5 GB in bytes
     record_count = 1000  # Jumlah record per insert
 
     while file_size < target_size:
