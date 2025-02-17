@@ -1,13 +1,33 @@
 import random
+word_list = ["aardvark", "baboon", "camel"]
 
-word_list = ["chicken","cow","camel"]
-random_item = random.choice(word_list)
+chosen_word = random.choice(word_list)
 
-user_input = input("masukan karakter: ").strip()
 
-result = [char == user_input for char in random_item]
 
-print(random_item)
+# TODO-1: Create a "placeholder" with the same number of blanks as the chosen_word
 
-for res in result:
-    print(res)
+
+# TODO-2: Create a "display" that puts the guess letter in the right positions and _ in the rest of the string.
+placeholder = ["_"] * len(chosen_word)
+
+while "_" in placeholder :
+    guess = input("Guess a letter: ").lower()
+
+    if guess in chosen_word:
+        for i, letter in enumerate(chosen_word):
+                if letter == guess:
+                    placeholder[i] = guess
+        print("Right")
+    else:
+            print("Wrong")
+
+    print(" ".join(placeholder))
+
+# print(chosen_word)
+
+
+
+
+
+
